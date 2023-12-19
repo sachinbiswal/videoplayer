@@ -1,38 +1,97 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+*{
+  margin: 0;
+  padding: 0;
+}.App {
+  font-family: 'Arial', sans-serif;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  /* height: 100vh; */
+  /* width: 100vw; */
+  background-color: #f4f4f4;
+}
+
+.player-container {
+  text-align: center;
+  margin-top: 10px;
+  border-radius: 5px;
+  max-width: 78%; 
+}
+
+button {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  margin: 0 5px;
+  border-radius: 5px;
+  width: 50px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.video1 {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+}
+
+input[type="range"] {
+  width: 25%;
+  height: 8px;
+  background: #d3d3d3;
+  border-radius: 5px;
+  outline: none;
+  
+  
+}
+.controls{
+  gap: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #007BFF;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  background: #0056b3;
+}
+
+.btn{
+  font-size: x-large;
+  border: 1px solid grey;
+  padding: 5px;
+  border-radius: 40%;
+  
+}
+.btn:hover{
+  background-color: blue;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (min-width:360px)and (max-width:1366px) {
+  .App{
+    margin: 0;
+    padding: 0;
+    /* border: 5px solid black; */
   }
-  to {
-    transform: rotate(360deg);
+  .player-container {
+    margin-top: 0;
+    text-align: center;
+    border-radius: 5px;
+    max-width: 100%;
+   
   }
 }
