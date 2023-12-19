@@ -50,7 +50,7 @@ button:hover {
   border-radius: 10px;
   width: 100%;
   height: auto;
-  object-fit: cover; /* Added to make the video fill the container while maintaining its aspect ratio */
+  object-fit: cover;
 }
 
 input[type="range"] {
@@ -105,13 +105,11 @@ input[type="range"]::-webkit-slider-thumb:hover {
 }
 
 .video-card {
-  /* border-radius: 20px; */
-  /* padding: 20px; */
   margin-top: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   width: 100%;
   height: 125px;
-  /* overflow: hidden; Added to ensure the video does not overflow the card */
+
 }
 
 .video-card video {

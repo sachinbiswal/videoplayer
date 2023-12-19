@@ -7,7 +7,7 @@ const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
 const VideoPlayer = () => {
   const videoRef = useRef(null);
   const [speed, setSpeed] = useState(1);
-  const [currentVideo, setCurrentVideo] = useState(0); // Updated: start from 0 for correct indexing
+  const [currentVideo, setCurrentVideo] = useState(0);
 
   const videoSources = [
     'demo.mp4',
