@@ -1,21 +1,34 @@
-*{
+* {
   margin: 0;
   padding: 0;
-}.App {
+}
+
+.App {
   font-family: 'Arial', sans-serif;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
-  /* height: 100vh; */
-  /* width: 100vw; */
   background-color: #f4f4f4;
+  display: flex;
+}
+
+.container {
+  display: flex;
 }
 
 .player-container {
   text-align: center;
   margin-top: 10px;
+  margin-left: 10px;
   border-radius: 5px;
-  max-width: 78%; 
+  max-width: 75%;
+}
+
+.additional-content {
+  margin-left: 10px;
+  width: 25%;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 button {
@@ -37,6 +50,7 @@ button:hover {
   border-radius: 10px;
   width: 100%;
   height: auto;
+  object-fit: cover; /* Added to make the video fill the container while maintaining its aspect ratio */
 }
 
 input[type="range"] {
@@ -45,16 +59,15 @@ input[type="range"] {
   background: #d3d3d3;
   border-radius: 5px;
   outline: none;
-  
-  
 }
-.controls{
+
+.controls {
   gap: 2%;
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
+
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
@@ -69,29 +82,65 @@ input[type="range"]::-webkit-slider-thumb:hover {
   background: #0056b3;
 }
 
-.btn{
+.btn {
   font-size: x-large;
   border: 1px solid grey;
   padding: 5px;
   border-radius: 40%;
-  
 }
-.btn:hover{
+
+.btn:hover {
   background-color: blue;
   color: white;
 }
 
-@media only screen and (min-width:360px)and (max-width:1366px) {
-  .App{
+.video-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.video-card {
+  /* border-radius: 20px; */
+  /* padding: 20px; */
+  margin-top: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 125px;
+  /* overflow: hidden; Added to ensure the video does not overflow the card */
+}
+
+.video-card video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media only screen and (min-width: 360px) and (max-width: 1366px) {
+  .App {
     margin: 0;
     padding: 0;
-    /* border: 5px solid black; */
+  }
+  .container {
+    flex-direction: column;
   }
   .player-container {
-    margin-top: 0;
     text-align: center;
+    margin-top: 0;
+    margin-left: 0;
     border-radius: 5px;
     max-width: 100%;
-   
+  }
+  .additional-content {
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 91%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #e0e0e0;
   }
 }
